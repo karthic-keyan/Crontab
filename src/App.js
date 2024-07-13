@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { cron } from "node-cron";
 
+/**
+ * 
+import { CronJob } from 'cron';
+
+const job = new CronJob(
+	'* * * * * *', // cronTime
+	function () {
+		console.log('You will see this message every second');
+    }, // onTick
+    null, // onComplete
+    true, // start
+    'America/Los_Angeles' // timeZone
+    );
+    */
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  console.log("cron", cron);
+  return <div className="App">Hello</div>;
 }
 
 export default App;
