@@ -1,22 +1,16 @@
-import { cron } from "node-cron";
+import cronstrue from "cronstrue";
 
-/**
- * 
-import { CronJob } from 'cron';
-
-const job = new CronJob(
-	'* * * * * *', // cronTime
-	function () {
-		console.log('You will see this message every second');
-    }, // onTick
-    null, // onComplete
-    true, // start
-    'America/Los_Angeles' // timeZone
-    );
-    */
 function App() {
-  console.log("cron", cron);
-  return <div className="App">Hello</div>;
+  const UTC = cronstrue.toString("1 2 3 4 5");
+  const IST = cronstrue.toString("1 2 3 4 5", { tzOffset: 5.3 });
+  return (
+    <div className="App">
+      <div className="flex flex-col">
+        <div>UTC - {UTC}</div>
+        <div>IST - {IST}</div>
+      </div>
+    </div>
+  );
 }
 
 export default App;
